@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "9f203445-7efb-49b5-ab8c-01104b82e9e4",
+		"name": "MovieService_Postman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all movies(no cache)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9092/movie/getMovies",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"movie",
+						"getMovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"imdbId\": 3,\n        \"title\": \"Aladdin2\",\n        \"storyLine\": \"Aladdin is a lovable street urchin who meets Princess Jasmine, the beautiful daughter of the sultan of Agrabah. While visiting her exotic palace, Aladdin stumbles upon a magic oil lamp that unleashes a powerful, wisecracking, larger-than-life genie. As Aladdin and the genie start to become friends, they must soon embark on a dangerous mission to stop the evil sorcerer, Jafar, from overthrowing young Jasmine kingdom.\",\n        \"releaseDate\": \"2019-05-24T04:00:00.000+00:00\",\n        \"rated\": \"PG\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9092/movie/addMovies",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"movie",
+						"addMovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie by ImdbId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9092/movie/3",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"movie",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie by ImdbId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9092/movie/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie evict",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9092/movie/evict",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"movie",
+						"evict"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
